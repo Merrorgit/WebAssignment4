@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(38, 73, 74);
+    transition: .5s ease;
+}
+
+.change{
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: rgb(124, 165, 247);
+    width: 150px;
+    position: absolute;
+}
+
+.change:active{
+    background-color: rgb(72, 85, 113);
+}
