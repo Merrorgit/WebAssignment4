@@ -1,0 +1,126 @@
+:root {
+    --colorBlack: #0b0c10;
+    --colorGray: #1f2833;
+    --colorLightGray: #c5c6c7;
+    --colorLightBlue: #66fcf1;
+    --colorBlue: #45a29e;
+}
+
+.light-theme {
+    --colorBlack: #ffffff;
+    --colorGray: #f0f0f0;
+    --colorLightGray: #333;
+    --colorLightBlue: #007bff;
+    --colorBlue: #0056b3;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--colorGray);
+}
+
+header {
+    color: var(--colorLightBlue);
+    text-shadow: 1px 1px 5px var(--colorBlue);
+}
+
+.footer {
+    background: linear-gradient(to top, var(--colorBlack), var(--colorGray));
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+    border-top: 2px solid var(--colorBlue);
+}
+
+.footer a {
+    color: var(--colorLightGray);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--colorLightBlue);
+    text-shadow: 1px 1px 5px var(--colorBlue);
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+#todo-app {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--colorGray);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#todo-form input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid var(--colorLightGray);
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: var(--colorBlack);
+    color: var(--colorLightGray);
+}
+
+#todo-form button {
+    padding: 10px 20px;
+    background-color: var(--colorLightBlue);
+    color: var(--colorBlack);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#todo-form button:hover {
+    background-color: var(--colorBlue);
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: var(--colorBlack);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--colorLightGray);
+}
+
+#todo-list li button {
+    background-color: var(--colorLightBlue);
+    border: none;
+    color: var(--colorBlack);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#todo-list li button:hover {
+    background-color: var(--colorBlue);
+}
+#theme-toggle {
+    padding: 10px 20px;
+    background-color: var(--colorLightBlue);
+    color: var(--colorBlack);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px; 
+}
+
+#theme-toggle:hover {
+    background-color: var(--colorBlue);
+    color: var(--colorLightGray);
+}
