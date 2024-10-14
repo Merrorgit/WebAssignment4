@@ -30,3 +30,51 @@ themeToggleButton.addEventListener('click', function() {
         }
     });
 });
+const form = document.getElementById('registration-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    
+    const errors = document.querySelectorAll('.error');
+    errors.forEach(error => error.textContent = '');
+
+    
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    let isValid = true;
+
+    if (username === '') {
+        document.getElementById('username-error').textContent = 'Username is required.';
+        isValid = false;
+    }
+
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '') {
+        document.getElementById('email-error').textContent = 'Email is required.';
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        document.getElementById('email-error').textContent = 'Incorrect email.';
+        isValid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById('password-error').textContent = 'Password must not be less than 6 symbols.';
+        isValid = false;
+    }
+
+    if (confirmPassword !== password) {
+        document.getElementById('confirm-password-error').textContent = 'Passwords are different.';
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Form succesfully sent');
+        form.reset();
+    }
+});
+
