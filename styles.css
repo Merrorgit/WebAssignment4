@@ -6,14 +6,6 @@
     --colorBlue: #45a29e;
 }
 
-.light-theme {
-    --colorBlack: #ffffff;
-    --colorGray: #f0f0f0;
-    --colorLightGray: #333;
-    --colorLightBlue: #007bff;
-    --colorBlue: #0056b3;
-}
-
 body {
     font-family: "Roboto Mono", monospace;
     background-color: var(--colorGray);
@@ -44,87 +36,124 @@ header {
     width: 20px;
     height: 20px;
 }
-
-#todo-app {
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+ .headerToDoList {
     background-color: var(--colorGray);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#todo-form input[type="text"] {
-    width: 70%;
+.addBtn {
     padding: 10px;
-    border: 2px solid var(--colorLightGray);
-    border-radius: 4px;
-    margin-right: 10px;
-    background-color: var(--colorBlack);
-    color: var(--colorLightGray);
-}
-
-#todo-form button {
-    padding: 10px 20px;
-    background-color: var(--colorLightBlue);
-    color: var(--colorBlack);
-    border: none;
-    border-radius: 4px;
+    width: 20%;
+    background: var(--colorLightBlue);
+    color: #555;
+    text-align: center;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
+    border-radius: 4px;
+    margin: 15px;
 }
 
-#todo-form button:hover {
-    background-color: var(--colorBlue);
+.addBtn:hover {
+    background-color: var(--colorLightGray);
 }
 
-#todo-list {
+.todo-list {
     list-style: none;
     padding: 0;
 }
 
-#todo-list li {
-    background-color: var(--colorBlack);
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    display: flex;
+.todo-list li {
+    display: flex; 
     justify-content: space-between;
     align-items: center;
-    color: var(--colorLightGray);
-}
-
-#todo-list li button {
-    background-color: var(--colorLightBlue);
-    border: none;
-    color: var(--colorBlack);
-    padding: 5px 10px;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: var(--colorGray);
+    font-size: 18px;
+    transition: background 0.2s;
+    margin-bottom: 5px;
     border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#todo-list li button:hover {
-    background-color: var(--colorBlue);
-}
-#theme-toggle {
-    padding: 10px 20px;
-    background-color: var(--colorLightBlue);
-    color: var(--colorBlack);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 20px;
-}
-
-#theme-toggle:hover {
-    background-color: var(--colorBlue);
+.todo-list li.checked {
+    background: var(--colorBlack);
     color: var(--colorLightGray);
 }
-.error {
-    color: red;
-    font-size: 0.9em;
+
+
+.deleteBtn {
+    background: var(--colorLightBlue);
+    color: #555;
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    transition: background 0.3s;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.deleteBtn:hover {
+    background-color: #66c3c1;
+}
+
+.completeBtn {
+    background: var(--colorLightBlue);
+    color: #555;
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    transition: background 0.3s;
+    margin-right: 10px;
+}
+.completeBtn:hover {
+    background-color: #66c3c1;
+}
+form {
+    background-color: var(--colorGray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    margin: auto; 
+}
+
+.form-label {
+    color: var(--colorLightGray);
+    display: block; 
+    margin-bottom: 8px; 
+}
+
+input {
+    border: 1px solid var(--colorLightGray);
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--colorBlack);
+    color: var(--colorLightGray);
+    margin: 10px;
+}
+
+.sendBtn {
+    padding: 10px 20px;
+    background: var(--colorLightBlue); 
+    color: #555; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background 0.3s, transform 0.2s; 
+    margin-top: 10px; 
+    display: block; 
+    width: 100%;
+}
+
+.sendBtn:hover {
+    background-color: var(--colorLightGray);
 }

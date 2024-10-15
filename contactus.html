@@ -70,33 +70,26 @@
                 </div>
             </div>
         </section> 
-        <div class="container mt-5">
             <h2>Leave your details and we will contact you!</h2>
             <form id="registration-form">
-                <div class="mb-3">
-                    <label for="username" class="form-label">User's name</label>
-                    <input type="text" class="form-control" id="username" required>
-                    <div class="error" id="username-error"></div>
+                <div>
+                    <label class="form-label">Username:</label>
+                    <input type="text" id="username" required>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                    <div class="error" id="email-error"></div>
+                <div>
+                    <label class="form-label">Email:</label>
+                    <input type="email" id="email" required>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" required>
-                    <div class="error" id="password-error"></div>
+                <div>
+                    <label class="form-label">Password:</label>
+                    <input type="password" id="password" required minlength="6">
                 </div>
-                <div class="mb-3">
-                    <label for="confirm-password" class="form-label">Password confirmation</label>
-                    <input type="password" class="form-control" id="confirm-password" required>
-                    <div class="error" id="confirm-password-error"></div>
+                <div>
+                    <label class="form-label">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="submit" class="sendBtn">Register</button>
             </form>
-        </div>
-        <button id="theme-toggle">Toggle Theme</button>   
     </main>
 
     <footer class="footer bg-dark text-light text-center py-4">
